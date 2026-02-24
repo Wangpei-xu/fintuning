@@ -23,3 +23,16 @@
 
 
 
+
+## A股假阴线统计脚本
+
+新增 `a_share_false_bearish_analysis.py`，用于统计：
+- 日K出现“假阴线”（收盘价 < 开盘价，且收盘价 > 前一日收盘价）
+- 下一交易日收盘价是否高于假阴线当日收盘价
+
+示例：
+
+```bash
+pip install akshare pandas
+python a_share_false_bearish_analysis.py --start 20200101 --end 20251231 --limit 300 --top 20
+```
